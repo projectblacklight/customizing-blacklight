@@ -9,7 +9,7 @@ title:               Customizing Blacklight
 tagline:             'HydraConnect 2015'
 description:         'Click the links below to see high-level pages about customizing parts of your Blacklight application.'
 url:                 http://lanyon.getpoole.com
-baseurl:             ''
+baseurl:             'https://jkeck.github.io/customizing-blacklight'
 paginate:            5
 highlighter:         pygments
 
