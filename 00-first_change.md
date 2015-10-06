@@ -4,7 +4,7 @@ title: First Change
 permalink: /first_change/
 ---
 
-One of the first things that that you will want to customize in your Blacklight installation in the home page. The home page that ships with Blacklight is not meant for end uses and is instead intended to introduce the developer to the concepts of beginning a new Blacklight site.
+One of the first things that that you will want to customize in your Blacklight installation is the home page. The home page that ships with Blacklight is not meant for end uses and is instead intended to introduce the developer to the concepts of beginning a new Blacklight site.
 
 <div class='image-well'>
   <img src='{{ site.baseurl }}/public/images/blacklight-homepage.png' alt='Blacklight Homepage' />
