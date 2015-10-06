@@ -61,5 +61,5 @@ $navbar-inverse-bg: #003268;
 @import 'blacklight';
 {% endhighlight %}
 
-Using this approach should with maintainability of your application's stylesheets. Modularity and SASS mixins are your friends :)
+Using this approach should facilitate maintainability of your application's stylesheets. Modularity and SASS mixins are your friends :)
 
