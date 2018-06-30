@@ -11,7 +11,7 @@ url:                 http://lanyon.getpoole.com
 baseurl:             '/customizing-blacklight'
 paginate:            5
 gems: ["jekyll-paginate"]
-highlighter:         pygments
+highlighter:         rouge
 
 # Custom vars
 blacklight_version:             5.14.0
