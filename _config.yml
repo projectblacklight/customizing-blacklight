@@ -2,7 +2,6 @@
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
-relative_permalinks: true
 
 # Setup
 title:               Customizing Blacklight
@@ -11,6 +10,7 @@ description:         'Click the links below to see high-level pages about custom
 url:                 http://lanyon.getpoole.com
 baseurl:             '/customizing-blacklight'
 paginate:            5
+gems: ["jekyll-paginate"]
 highlighter:         pygments
 
 # Custom vars
