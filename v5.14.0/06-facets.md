@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Facets
-permalink: /facets/
+permalink: /v5.14.0/facets/
+redirect_from: /facets/
+blacklight_version: v5.14.0
 ---
 
 Blacklight allows you to customize your facet display in several ways out-of-the-box. Many of these techniques are covered in other parts of these tutorials but we'll cover the basics as they relate specifically to facets.

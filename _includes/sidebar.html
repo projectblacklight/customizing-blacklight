@@ -16,16 +16,15 @@
       `layout: page` in the front-matter. See readme for usage.
     {% endcomment %}
 
-    {% assign pages_list = site.pages | sort:"name" %}
-    {% for node in pages_list %}
-      {% if node.title != null %}
-        {% if node.layout == "page" %}
-          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
+    {% if page.blacklight_version %}
+      {% include pages_sidebar.html %}
+    {% else %}
+      {% include versions_sidebar.html %}
+    {% endif %}
 
-    <span class="sidebar-nav-item">Based on Blacklight v{{ site.blacklight_version }}</span>
+    {% if page.blacklight_version %}
+      <span class="sidebar-nav-item">Based on Blacklight {{ page.blacklight_version }}</span>
+    {% endif %}
   </nav>
 
   <div class="sidebar-item">

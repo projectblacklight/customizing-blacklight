@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Overrides
-permalink: /overrides/
+permalink: /v5.14.0/overrides/
+redirect_from: /overrides/
+blacklight_version: v5.14.0
 ---
 
 Much of Blacklight is written in a way that is overridable, helper methods are no different.
@@ -13,8 +15,8 @@ For example, the `render_constraints` method renders the constraints area in the
 {% highlight ruby %}
 ##
 # Render the actual constraints, not including header or footer
-# info. 
-# 
+# info.
+#
 # @param [Hash] query parameters
 # @return [String]
 def render_constraints(localized_params = params)
@@ -49,8 +51,8 @@ Now we are free to override methods to meet our custom application needs. For ex
 module RenderConstraintsHelper
   include Blacklight::RenderConstraintsHelperBehavior
   ##
-  # Overridden to include an extra message 
-  # 
+  # Overridden to include an extra message
+  #
   # @param [Hash] query parameters
   # @return [String]
   def render_constraints(localized_params = params)

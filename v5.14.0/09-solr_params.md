@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Solr Parameters
-permalink: /solr_params/
+permalink: /v5.14.0/solr_params/
+redirect_from: /solr_params/
+blacklight_version: v5.14.0
 ---
 
 The `catalog_controller.rb` can also be used to send custom parameters to Solr. There are several ways to implement custom Solr queries, this tutorial will focus on a way using the `CatalogController`.

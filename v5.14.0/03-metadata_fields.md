@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Metadata Fields
-permalink: /metadata_fields/
+permalink: /v5.14.0/metadata_fields/
+redirect_from: /metadata_fields/
+blacklight_version: v5.14.0
 ---
 
 Blacklight allows you to configure which solr fields display in search results and the record view. There are various ways to customize how these fields display and how they behave.  Blacklight will auto-generate a configuration into a controller in your application. For the purposes of this tutorial we'll assume that it is the `CatalogController`.

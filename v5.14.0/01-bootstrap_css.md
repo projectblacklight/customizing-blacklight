@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Bootstrap CSS
-permalink: /bootstrap_css/
+permalink: /v5.14.0/bootstrap_css/
+redirect_from: /bootstrap_css/
+blacklight_version: v5.14.0
 ---
 
 Blacklight uses the [Bootstrap](http://getbootstrap.com/) framework for much of its user interface. This layout and UI integration is done using the [bootstrap-sass](https://github.com/twbs/bootstrap-sass) gem. Using bootstrap-sass allows Blacklight adopters to easily style and enhance their applications, using DRY principles and with minimal version upgrade pains.
@@ -62,4 +64,3 @@ $navbar-inverse-bg: #003268;
 {% endhighlight %}
 
 Using this approach should facilitate maintainability of your application's stylesheets. Modularity and SASS mixins are your friends :)
-

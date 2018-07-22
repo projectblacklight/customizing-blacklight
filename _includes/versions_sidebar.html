@@ -1,0 +1,3 @@
+{% for version in site.blacklight_versions %}
+  <a class="sidebar-nav-item{% if version == page.version %} active{% endif %}" href="{{ site.baseurl }}/{{ version }}/first_change/">{{ version }}</a>
+{% endfor %}
