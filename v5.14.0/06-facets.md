@@ -78,7 +78,7 @@ Now when you add a `_facet_limit.html.erb` partial at `app/views/catalog` this p
 The well you provided will now show up for the Format facet. You can use this technique to do some very heavy modification of your facets to provide various interesting interfaces.
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/custom-facet.png' alt='Customized format facet' />
+  <img src='/public/images/custom-facet.png' alt='Customized format facet' />
   <div class='caption'>Customized facet with text in a well</div>
 </div>
 

@@ -9,7 +9,7 @@ blacklight_version: v5.14.0
 One of the first things that that you will want to customize in your Blacklight installation is the home page. The home page that ships with Blacklight is not meant for end uses and is instead intended to introduce the developer to the concepts of beginning a new Blacklight site.
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/blacklight-homepage.png' alt='Blacklight Homepage' />
+  <img src='/public/images/blacklight-homepage.png' alt='Blacklight Homepage' />
   <div class='caption'>Default blacklight homepage</div>
 </div>
 
@@ -26,7 +26,7 @@ If we add the following content to our newly created file and refresh the browse
 {% endhighlight %}
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/updated-homepage.png' alt='Updated Homepage' />
+  <img src='/public/images/updated-homepage.png' alt='Updated Homepage' />
   <div class='caption'>Updated homepage</div>
 </div>
 

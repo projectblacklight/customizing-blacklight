@@ -36,7 +36,7 @@ Now that you have that key in your locale file that value will be used as the la
 One of the more powerful techniques for customizing metadata fields is to configure a `helper_method` for a particular field. The value of the `helper_method` configuration is a symbol which represents the name of a method available to your helpers/views. This is a common customization technique if you wanted to do something like link ISBNs to external services for lookup.
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/link-record.png' alt='Record view without customization' />
+  <img src='/public/images/link-record.png' alt='Record view without customization' />
   <div class='caption'>Unlinked ISBN fields</div>
 </div>
 
@@ -56,7 +56,7 @@ end
 {% endhighlight %}
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/linked-isbns.png' alt='Customized record view with ISBN links' />
+  <img src='/public/images/linked-isbns.png' alt='Customized record view with ISBN links' />
   <div class='caption'>ISBN fields linked to an external search</div>
 </div>
 

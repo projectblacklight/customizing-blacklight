@@ -25,7 +25,7 @@ end
 {% endhighlight %}
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/default-constraints.jpg' alt='Default constraints' />
+  <img src='/public/images/default-constraints.jpg' alt='Default constraints' />
   <div class='caption'>Default constraints</div>
 </div>
 
@@ -64,7 +64,7 @@ end
 This overridden method adds a string to the `super` call. `super` here calls the `render_constraints` method defined in `Blacklight::RenderConstraintsHelperBehavior` and our concatenated string is returned and displayed in the interface.
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/custom-constraints.jpg' alt='Custom constraints' />
+  <img src='/public/images/custom-constraints.jpg' alt='Custom constraints' />
   <div class='caption'>Custom constraints</div>
 </div>
 

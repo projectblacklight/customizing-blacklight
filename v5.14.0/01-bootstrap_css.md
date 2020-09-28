@@ -25,7 +25,7 @@ Next, import the `blacklight.css.scss` into your `application.scss` file.
 Your application should still be styled with the Blacklight defaults.
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/default-styles.jpg' alt='Blacklight with default styling' />
+  <img src='/public/images/default-styles.jpg' alt='Blacklight with default styling' />
   <div class='caption'>Blacklight with default styling</div>
 </div>
 
@@ -45,7 +45,7 @@ $navbar-inverse-bg: #003268;
 After saving and reloading your homepage, you should see that the navbar color and size has changed.
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/updated-navbar.jpg' alt='Blacklight with updated navbar' />
+  <img src='/public/images/updated-navbar.jpg' alt='Blacklight with updated navbar' />
   <div class='caption'>Blacklight with updated navbar</div>
 </div>
 

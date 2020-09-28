@@ -35,6 +35,6 @@ Edit your `config/routes.rb` file to make these changes.
 When you navigate to [http://127.0.0.1:3000](http://127.0.0.1:3000) you should see your StaticPages#home homepage. 
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/custom-home-page.jpg' alt='Custom Blacklight Homepage' />
+  <img src='/public/images/custom-home-page.jpg' alt='Custom Blacklight Homepage' />
   <div class='caption'>Custom Blacklight homepage</div>
 </div>

@@ -40,7 +40,7 @@ end
 {% endhighlight%}
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/search-result-with-thumbnail.png' alt='Blacklight search result' />
+  <img src='/public/images/search-result-with-thumbnail.png' alt='Blacklight search result' />
   <div class='caption'>Updated search result with thumbnail</div>
 </div>
 
