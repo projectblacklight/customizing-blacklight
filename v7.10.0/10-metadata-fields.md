@@ -25,10 +25,25 @@ All the text in Blacklight's UI are configured via rails' i18n files. While you 
 
 If you wanted to change the label of all `author_tsim` fields to "Creator" you can do that by adding the label to your locale file.
 
-```
+```yaml
 en:
   blacklight:
     search:
       fields:
         author_tsim: Creator
+```
+
+The context of where the fields are being rendered in the application will be passed though as part of the i18n key as well, so you can have different labels under different view contexts (e.g. `index` vs `show`) or have a default that is overridden for a particular view context.
+
+```yaml
+en:
+  blacklight:
+    search:
+      fields:
+        title_tsim: Title
+        index:
+          author_tsim: Author
+        show:
+          author_tsim: Creator
+          title_tsim: Work
 ```
