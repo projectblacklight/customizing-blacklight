@@ -1,6 +1,6 @@
 ---
 layout: page
-title: First Change
+title: Updating the home page
 permalink: /v7.10.0/first_change/
 blacklight_version: v7.10.0
 ---

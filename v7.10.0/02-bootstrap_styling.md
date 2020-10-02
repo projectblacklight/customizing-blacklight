@@ -23,6 +23,11 @@ Next, import the `blacklight.scss` into your `application.scss` file.
 @import 'blacklight';
 ```
 
+<div class="alert alert-warning">
+  This document assumes that you are using [Sprockets](https://github.com/rails/sprockets) for the assets for your application. You are welcome to use [Webpacker](https://github.com/rails/webpacker), but it will not work with the guidance here.
+</div>
+
+
 Your application should still look like the default Blacklight styling. Now let's start to customize the theme.
 
 The Bootstrap framework allows you to update your application’s styling using variables, rather than overriding CSS. This helps for easier customization and longterm sustainability. One of the first thing customizations that organizations make is changing color schemes and the navigation bar. We will do this by adding some additional variable declarations to our `application.scss` file about the Blacklight import statement.
