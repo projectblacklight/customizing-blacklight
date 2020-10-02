@@ -45,7 +45,7 @@ Your application should have been changed so a [search results page](http://127.
 
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/blacklight7-custom-style.jpg' alt='Custom styled page' />
+  <img src='/public/images/blacklight7-custom-style.jpg' alt='Custom styled page' />
   <div class='caption'>Custom styled page</div>
 </div>
 
