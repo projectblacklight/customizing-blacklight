@@ -1,0 +1,26 @@
+{% assign pages_list = site.pages | where: 'blacklight_version', page.blacklight_version | sort:"name" %}
+{% assign page_index = 0 %}
+{% for node in pages_list %}
+  {% if node.blacklight_version == page.blacklight_version %}
+    {% if node.url == page.url %}
+      {% assign next_page_index = page_index | plus: 1 %}
+      {% assign next_page = pages_list[next_page_index] %}
+      {% assign previous_page_index = page_index | minus: 1 %}
+      {% assign previous_page = pages_list[previous_page_index] %}
+      <div class="pagination">
+        {% if previous_page and previous_page_index >= 0 %}
+          <a class="pagination-item older" href="{{ previous_page.url }}">Previous</a>
+        {% else %}
+          <span class="pagination-item older">Previous</span>
+        {% endif %}
+        {% if next_page %}
+            <a class="pagination-item newer" href="{{ next_page.url }}">Next</a>
+        {% else %}
+          <span class="pagination-item newer">Next</span>
+        {% endif %}
+      </div>
+    {% else %}
+      {% assign page_index = page_index | plus: 1 %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
