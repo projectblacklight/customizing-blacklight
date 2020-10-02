@@ -5,11 +5,6 @@ permalink: /v7.11.1/metadata_fields/
 blacklight_version: v7.11.1
 ---
 
-## TODO
-
-* Add section about new blacklight field types
-* Add section about adding arbitrary config options to field
-
 Blacklight allows you to configure which solr fields display in search results and the record view. There are various ways to customize how these fields display and how they behave.  Blacklight will auto-generate a configuration into a controller in your application. For the purposes of this tutorial we'll assume that it is the `CatalogController`.
 
 There is a lot more detailed information on the [Blacklight wiki](https://github.com/projectblacklight/blacklight/wiki/Configuration---Results-View) but we'll cover some of the basic customization options.
