@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Solr parameters
-permalink: /v7.10.0/solr-in-blacklight/
-blacklight_version: v7.10.0
+permalink: /v7.11.1/solr-in-blacklight/
+blacklight_version: v7.11.1
 ---
 
 When we search in the application, we can see the search results from Solr.

@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Configuring Metadata Fields
-permalink: /v7.10.0/config_patterns/
-blacklight_version: v7.10.0
+permalink: /v7.11.1/config_patterns/
+blacklight_version: v7.11.1
 ---
 
 The metadata fields that are displayed in the index (search results) and show (record view) can be configured using the `add_index_field` and `add_show_field` configuration methods in the Blacklight config.
@@ -17,7 +17,7 @@ configure_blacklight do |config|
 end
 ```
 
-The configuration patterns outlined on [General Configuration Patterns](/v7.10.0/config_patterns/) apply to these fields so you can use any of those to customize the display of these fields.
+The configuration patterns outlined on [General Configuration Patterns](/v7.11.1/config_patterns/) apply to these fields so you can use any of those to customize the display of these fields.
 
 ## Labeling via Internationalization (i18n)
 

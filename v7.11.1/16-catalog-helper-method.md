@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Catalog helper_method usage
-permalink: /v7.10.0/catalog-helper-method-usage/
-blacklight_version: v7.10.0
+permalink: /v7.11.1/catalog-helper-method-usage/
+blacklight_version: v7.11.1
 ---
 
 We previously saw how powerful the configuration options are in the `CatalogController`. Now we will learn about one more configuration option: `helper_method`.

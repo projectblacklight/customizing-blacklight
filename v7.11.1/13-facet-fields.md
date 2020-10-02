@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Configuring Facet Fields
-permalink: /v7.10.0/facet_fields/
-blacklight_version: v7.10.0
+permalink: /v7.11.1/facet_fields/
+blacklight_version: v7.11.1
 ---
 
 Blacklight provides facets to help a user filter search results.

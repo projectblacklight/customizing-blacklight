@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Configuring Sort Fields
-permalink: /v7.10.0/sort_fields/
-blacklight_version: v7.10.0
+permalink: /v7.11.1/sort_fields/
+blacklight_version: v7.11.1
 ---
 
 Blacklight provides a UI element to choose a sort order for results when multiple sort options are configured.

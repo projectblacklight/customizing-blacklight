@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Metadata Fields
-permalink: /v7.10.0/metadata_fields/
-blacklight_version: v7.10.0
+permalink: /v7.11.1/metadata_fields/
+blacklight_version: v7.11.1
 ---
 
 ## TODO

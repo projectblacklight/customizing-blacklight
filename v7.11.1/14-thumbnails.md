@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Thumbnails
-permalink: /v7.10.0/thumbnails/
+permalink: /v7.11.1/thumbnails/
 redirect_from: /thumbnails/
-blacklight_version: v7.10.0
+blacklight_version: v7.11.1
 ---
 
 Blacklight provides the ability to easily configure thumbnails to show up in your search results out-of-the-box. There are two main ways of customizing your search results with thumbnails using Blacklight's provided mechanism.

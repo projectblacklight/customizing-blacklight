@@ -1,8 +1,8 @@
 ---
 layout: page
 title: SVG Icons in Blacklight
-permalink: /v7.10.0/svg-icons/
-blacklight_version: v7.10.0
+permalink: /v7.11.1/svg-icons/
+blacklight_version: v7.11.1
 ---
 
 Internally Blacklight uses a helper method, `blacklight_icon`, to render icons throughout the application. This approach relies on an icon being available as an asset in an SVG file. The files are located in Blacklight at [`app/assets/images/blacklight`](https://github.com/projectblacklight/blacklight/tree/master/app/assets/images/blacklight).

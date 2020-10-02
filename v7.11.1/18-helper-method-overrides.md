@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Helper method overrides
-permalink: /v7.10.0/helper-method-overrides/
+permalink: /v7.11.1/helper-method-overrides/
 redirect_from: /overrides/
-blacklight_version: v7.10.0
+blacklight_version: v7.11.1
 ---
 
 Much of Blacklight is written in a way that is overridable, helper methods are no different.

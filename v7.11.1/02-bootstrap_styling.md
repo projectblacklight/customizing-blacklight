@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Bootstrap Styling
-permalink: /v7.10.0/bootstrap-styling/
-blacklight_version: v7.10.0
+permalink: /v7.11.1/bootstrap-styling/
+blacklight_version: v7.11.1
 ---
 
 Blacklight uses the [Bootstrap](https://getbootstrap.com/) project as a base for UI components and it is added as a dependency during the Blacklight generator process.

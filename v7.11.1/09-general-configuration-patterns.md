@@ -1,8 +1,8 @@
 ---
 layout: page
 title: General Configuration Patterns
-permalink: /v7.10.0/config_patterns/
-blacklight_version: v7.10.0
+permalink: /v7.11.1/config_patterns/
+blacklight_version: v7.11.1
 ---
 
 There are some configuration patterns that exist in multiple places around the Blacklight UI. You'll notice similar configuration APIs for various things link different kinds of metadata fields as well as other UI elements around the App.  You'll often see configuration keys like `label`, `partial`, `if`/`unless`, etc. being used for configuring different things (but they all are intended to work the same).

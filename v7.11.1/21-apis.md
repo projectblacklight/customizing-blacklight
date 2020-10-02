@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Blacklight APIs
-permalink: /v7.10.0/apis/
-blacklight_version: v7.10.0
+permalink: /v7.11.1/apis/
+blacklight_version: v7.11.1
 ---
 
 Blacklight has out-of-the-box support for some APIs that make integrating it with other applications quick and easy.

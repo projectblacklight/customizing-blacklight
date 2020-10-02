@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Model, View, Controller, and Rails Engines.
-permalink: /v7.10.0/mvc-routing-engines
-blacklight_version: v7.10.0
+permalink: /v7.11.1/mvc-routing-engines
+blacklight_version: v7.11.1
 ---
 
 Blacklight is a [Ruby on Rails engine](https://guides.rubyonrails.org/engines.html). This means it can be added and used within an existing Ruby on Rails application, or be used to generate applications that are standalone.

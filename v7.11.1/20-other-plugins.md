@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Other Blacklight plugins
-permalink: /v7.10.0/other-plugins/
-blacklight_version: v7.10.0
+permalink: /v7.11.1/other-plugins/
+blacklight_version: v7.11.1
 ---
 
 Because Blacklight is a configurable and extendable Ruby on Rails engine, other plugins exist for Blacklight that add additional functionality.  These plugins themselves are Ruby on Rails engines that usually require Blacklight as a dependency and inject custom behavior.

@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Solr basics
-permalink: /v7.10.0/solr/
-blacklight_version: v7.10.0
+permalink: /v7.11.1/solr/
+blacklight_version: v7.11.1
 ---
 
 Blacklight uses Apache Solr as its data index [^1], but does not care how you run or index data into your instance. For this workshop, we're starting with the same set of configuration files that Blacklight uses for its own testing. In this section, we'll take a look at some commonly used tools and approaches.

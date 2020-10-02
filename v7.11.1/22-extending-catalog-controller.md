@@ -1,11 +1,11 @@
 ---
 layout: page
 title: Extending the CatalogController
-permalink: /v7.10.0/extending-catalog-controller/
-blacklight_version: v7.10.0
+permalink: /v7.11.1/extending-catalog-controller/
+blacklight_version: v7.11.1
 ---
 
-In (Model, View, Controller, and Rails Engines)[/v7.10.0/mvc-routing-engines], we created a separate home page controller that displays only static text. Now we'd like to put a selection of facet fields on that page.
+In (Model, View, Controller, and Rails Engines)[/v7.11.1/mvc-routing-engines], we created a separate home page controller that displays only static text. Now we'd like to put a selection of facet fields on that page.
 
 First, we need to pull in the Blacklight configuration from the `CatalogController`, query Solr, and render the facets. The most expedient way to do that, perhaps, is to change the `StaticPagesController` to have it inherit from `CatalogController` (pulling in the Blacklight configuration automatically, and, through Rails magic, setting everything up so we can easily render the same partials):
 

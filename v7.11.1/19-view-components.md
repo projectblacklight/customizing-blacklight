@@ -1,8 +1,8 @@
 ---
 layout: page
 title: View Components
-permalink: /v7.10.0/view-components/
-blacklight_version: v7.10.0
+permalink: /v7.11.1/view-components/
+blacklight_version: v7.11.1
 ---
 
 Blacklight has added support for [view components](https://github.com/github/view_component). While there are several benefits to using this abstraction, the major benefit for Blacklight (as a Rails engine) the ability to define an explicit interface to views to make them easier and safer to override.

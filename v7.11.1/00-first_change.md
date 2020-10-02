@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Updating the home page
-permalink: /v7.10.0/first_change/
-blacklight_version: v7.10.0
+permalink: /v7.11.1/first_change/
+blacklight_version: v7.11.1
 ---
 
 One of the first things that that you will want to customize in your Blacklight installation is the home page. The home page that ships with Blacklight is not meant for end uses and is instead intended to introduce the developer to the concepts of beginning a new Blacklight site.

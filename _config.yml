@@ -18,4 +18,4 @@ plugins:
 # Custom vars
 blacklight_versions:
   - v5.14.0
-  - v7.10.0
+  - v7.11.1
