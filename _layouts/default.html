@@ -14,13 +14,14 @@
         <div class="container">
           <h3 class="masthead-title">
             <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
+            <small>{{ site.tagline }}{% if page.blacklight_version %} ({{ page.blacklight_version }}){% endif %}</small>
           </h3>
         </div>
       </div>
 
       <div class="container content">
         {{ content }}
+        {% include previous_next.html %}
       </div>
     </div>
 

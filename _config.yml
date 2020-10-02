@@ -5,13 +5,17 @@ permalink:           pretty
 
 # Setup
 title:               Customizing Blacklight
-tagline:             'HydraConnect 2015'
+tagline:             'Tutorial Series'
 description:         'Click the links below to see high-level pages about customizing parts of your Blacklight application.'
 url:                 http://lanyon.getpoole.com
 baseurl:             '/'
 paginate:            5
-gems: ["jekyll-paginate"]
+gems:                ["jekyll-paginate"]
 highlighter:         rouge
+plugins:
+  - jekyll-redirect-from
 
 # Custom vars
-blacklight_version:             5.14.0
+blacklight_versions:
+  - v5.14.0
+  - v7.11.1

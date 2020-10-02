@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Solr Parameters
-permalink: /solr_params/
+permalink: /v5.14.0/solr_params/
+redirect_from: /solr_params/
+blacklight_version: v5.14.0
 ---
 
 The `catalog_controller.rb` can also be used to send custom parameters to Solr. There are several ways to implement custom Solr queries, this tutorial will focus on a way using the `CatalogController`.
@@ -11,7 +13,7 @@ The `catalog_controller.rb` can also be used to send custom parameters to Solr. 
 For example, let's take a look at our "Language" facet. Solr is returning results from 12 different languages, but what if we want results limited to "Japanese"?
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/default-language-facet.jpg' alt='Default language facet' />
+  <img src='/public/images/default-language-facet.jpg' alt='Default language facet' />
   <div class='caption'>Default "Language" facet</div>
 </div>
 
@@ -49,7 +51,7 @@ class CatalogController < ApplicationController
 The language limiting query is now added to the Solr query, which in turn returns only results with "Japanese" in the `language_facet` field.
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/custom-language-facet.jpg' alt='Custom language facet' />
+  <img src='/public/images/custom-language-facet.jpg' alt='Custom language facet' />
   <div class='caption'>Custom "Language" facet</div>
 </div>
 

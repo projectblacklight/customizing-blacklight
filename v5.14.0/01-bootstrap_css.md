@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Bootstrap CSS
-permalink: /bootstrap_css/
+permalink: /v5.14.0/bootstrap_css/
+redirect_from: /bootstrap_css/
+blacklight_version: v5.14.0
 ---
 
 Blacklight uses the [Bootstrap](http://getbootstrap.com/) framework for much of its user interface. This layout and UI integration is done using the [bootstrap-sass](https://github.com/twbs/bootstrap-sass) gem. Using bootstrap-sass allows Blacklight adopters to easily style and enhance their applications, using DRY principles and with minimal version upgrade pains.
@@ -23,7 +25,7 @@ Next, import the `blacklight.css.scss` into your `application.scss` file.
 Your application should still be styled with the Blacklight defaults.
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/default-styles.jpg' alt='Blacklight with default styling' />
+  <img src='/public/images/default-styles.jpg' alt='Blacklight with default styling' />
   <div class='caption'>Blacklight with default styling</div>
 </div>
 
@@ -43,7 +45,7 @@ $navbar-inverse-bg: #003268;
 After saving and reloading your homepage, you should see that the navbar color and size has changed.
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/updated-navbar.jpg' alt='Blacklight with updated navbar' />
+  <img src='/public/images/updated-navbar.jpg' alt='Blacklight with updated navbar' />
   <div class='caption'>Blacklight with updated navbar</div>
 </div>
 
@@ -62,4 +64,3 @@ $navbar-inverse-bg: #003268;
 {% endhighlight %}
 
 Using this approach should facilitate maintainability of your application's stylesheets. Modularity and SASS mixins are your friends :)
-

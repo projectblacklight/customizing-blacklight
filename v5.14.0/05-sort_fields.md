@@ -1,13 +1,15 @@
 ---
 layout: page
 title: Sort Fields
-permalink: /sort_fields/
+permalink: /v5.14.0/sort_fields/
+redirect_from: /sort_fields/
+blacklight_version: v5.14.0
 ---
 
 Blacklight provides a dropdown UI element for changing the sort order of search results. The sort options will show up in the dropdown in the order they're configured, and the first one is the default sort if no sort key is present in the url.
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/sort-dropdown.png' alt='Sort dropdown' />
+  <img src='/public/images/sort-dropdown.png' alt='Sort dropdown' />
   <div class='caption'>Default sort dropdown</div>
 </div>
 
@@ -22,7 +24,7 @@ end
 {% endhighlight%}
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/updated-sort-dropdown.png' alt='Sort dropdown' />
+  <img src='/public/images/updated-sort-dropdown.png' alt='Sort dropdown' />
   <div class='caption'>Updated sort dropdown</div>
 </div>
 

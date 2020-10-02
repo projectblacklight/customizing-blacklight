@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Thumbnails
-permalink: /thumbnails/
+permalink: /v7.11.1/thumbnails/
+redirect_from: /thumbnails/
+blacklight_version: v7.11.1
 ---
 
 Blacklight provides the ability to easily configure thumbnails to show up in your search results out-of-the-box. There are two main ways of customizing your search results with thumbnails using Blacklight's provided mechanism.
@@ -38,7 +40,7 @@ end
 {% endhighlight%}
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/search-result-with-thumbnail.png' alt='Blacklight search result' />
+  <img src='/public/images/search-result-with-thumbnail.png' alt='Blacklight search result' />
   <div class='caption'>Updated search result with thumbnail</div>
 </div>
 

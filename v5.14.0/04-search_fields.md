@@ -1,13 +1,15 @@
 ---
 layout: page
 title: Search Fields
-permalink: /search_fields/
+permalink: /v5.14.0/search_fields/
+redirect_from: /search_fields/
+blacklight_version: v5.14.0
 ---
 
 Blacklight supports fielded search out of the box.  There is a dropdown next to the search field that allows the user to choose if they want to search all or a limited set of fields (e.g. Title, Author, etc). The ability to customize this is of particular interest to those in the Hydra-sphere as it is configured for Blacklight's out-of-the-box defaults which aren't necessarily compatible with what you'll probably be using in your Hydra application.
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/fielded-search-dropdown.png' alt='Blacklight search box' />
+  <img src='/public/images/fielded-search-dropdown.png' alt='Blacklight search box' />
   <div class='caption'>Default fielded search options</div>
 </div>
 
@@ -23,7 +25,7 @@ config.add_search_field 'all_fields', label: 'Everything'
 {% endhighlight %}
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/updated-search-dropdown.png' alt='Blacklight search box' />
+  <img src='/public/images/updated-search-dropdown.png' alt='Blacklight search box' />
   <div class='caption'>Updated fielded search options</div>
 </div>
 

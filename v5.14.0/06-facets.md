@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Facets
-permalink: /facets/
+permalink: /v5.14.0/facets/
+redirect_from: /facets/
+blacklight_version: v5.14.0
 ---
 
 Blacklight allows you to customize your facet display in several ways out-of-the-box. Many of these techniques are covered in other parts of these tutorials but we'll cover the basics as they relate specifically to facets.
@@ -76,7 +78,7 @@ Now when you add a `_facet_limit.html.erb` partial at `app/views/catalog` this p
 The well you provided will now show up for the Format facet. You can use this technique to do some very heavy modification of your facets to provide various interesting interfaces.
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/custom-facet.png' alt='Customized format facet' />
+  <img src='/public/images/custom-facet.png' alt='Customized format facet' />
   <div class='caption'>Customized facet with text in a well</div>
 </div>
 

@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Overrides
-permalink: /overrides/
+permalink: /v5.14.0/overrides/
+redirect_from: /overrides/
+blacklight_version: v5.14.0
 ---
 
 Much of Blacklight is written in a way that is overridable, helper methods are no different.
@@ -13,8 +15,8 @@ For example, the `render_constraints` method renders the constraints area in the
 {% highlight ruby %}
 ##
 # Render the actual constraints, not including header or footer
-# info. 
-# 
+# info.
+#
 # @param [Hash] query parameters
 # @return [String]
 def render_constraints(localized_params = params)
@@ -23,7 +25,7 @@ end
 {% endhighlight %}
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/default-constraints.jpg' alt='Default constraints' />
+  <img src='/public/images/default-constraints.jpg' alt='Default constraints' />
   <div class='caption'>Default constraints</div>
 </div>
 
@@ -49,8 +51,8 @@ Now we are free to override methods to meet our custom application needs. For ex
 module RenderConstraintsHelper
   include Blacklight::RenderConstraintsHelperBehavior
   ##
-  # Overridden to include an extra message 
-  # 
+  # Overridden to include an extra message
+  #
   # @param [Hash] query parameters
   # @return [String]
   def render_constraints(localized_params = params)
@@ -62,7 +64,7 @@ end
 This overridden method adds a string to the `super` call. `super` here calls the `render_constraints` method defined in `Blacklight::RenderConstraintsHelperBehavior` and our concatenated string is returned and displayed in the interface.
 
 <div class='image-well'>
-  <img src='{{ site.baseurl }}/public/images/custom-constraints.jpg' alt='Custom constraints' />
+  <img src='/public/images/custom-constraints.jpg' alt='Custom constraints' />
   <div class='caption'>Custom constraints</div>
 </div>
 
