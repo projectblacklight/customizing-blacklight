@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Configuring Metadata Fields
-permalink: /v7.11.1/config_patterns/
+permalink: /v7.11.1/configuring_metadata/
 blacklight_version: v7.11.1
 ---
 
