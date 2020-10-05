@@ -55,3 +55,7 @@ configure_blacklight do |config|
   end
 end
 ```
+
+<div class="alert alert-primary">
+  For more information about configuring Blacklight, <a href="https://github.com/projectblacklight/blacklight/wiki/Configuring-and-Customizing-Blacklight#configuration">checkout the Blacklight Wiki</a>.
+</div>
