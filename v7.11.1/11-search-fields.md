@@ -47,12 +47,14 @@ configure_blacklight do |config|
   config.add_search_field 'all_fields', label: 'All Fields'
   config.add_search_field 'title', label: 'Title' do |field|
     field.solr_parameters = {
-      qf: '${title_qf}',
-      pf: '${title_pf}'
+      qf: 'title_tsim full_title_tsim short_title_tsim alternative_title_tsim',
+      pf: ''
     }
   end
 end
 ```
+
+It's also possible to use `qf`/`pf`s that are configured in your request handler by using the name wrapped in `${}` (e.g. `qf: '${title_qf}'`).
 
 ```xml
 <requestHandler name="search" class="solr.SearchHandler" default="true">
