@@ -48,6 +48,34 @@ en:
           title_tsim: Work
 ```
 
+## Formatting Options
+
+There are a few configuration options that can help you format the data using Blacklight out-of-the-box rendering pipeline.
+
+One common customization is to update the way that Blacklight joins multiple values by default. Blacklight's rendering pipeline uses rails' [`to_sentence`](https://apidock.com/rails/Array/to_sentence) helper (with its default options) to join multiple solr field values together, and allows you to pass in alternate options using the `separator_options` configuration option.  For instance, if we wanted to separate all values by line breaks instead of the `,`s and `and` we can do that with the following configuration (the record with ID 92117465 is a good example of this in action).
+
+```ruby
+configure_blacklight do |config|
+  # This field configuration would need to be added as it is not in the generated controller
+  config.add_show_field 'author_addl_tsim', label: 'Additional authors', separator_options: {
+    two_words_connector: '<br />',
+    words_connector: '<br />',
+    last_word_connector: '<br />'
+  }
+end
+```
+
+It's also possible to link these values using the built-in `link_to_facet` configuration option. Two of the show fields that it might make sense to do this with (and are indexed appropriately for faceting) are the format and language fields on the show view.
+
+```diff
+- config.add_show_field 'format', label: 'Format'
+- config.add_show_field 'language_ssim', label: 'Language'
++ config.add_show_field 'format', label: 'Format', link_to_facet: true
++ config.add_show_field 'language_ssim', label: 'Language', link_to_facet: true
+```
+
+These two fields should now be linked to a faceted search result for their respective fields.
+
 ## Values
 
 The field values can also be mapped using field configuration. There are two easy ways to transform values from the solr document into values to display to the end user; you can use a model method/accessor for data-based transformations, or a controller-level method for other transformations.
