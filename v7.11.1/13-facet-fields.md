@@ -58,4 +58,33 @@ config.add_facet_field 'example_query_facet_field', label: 'Publish Date', query
 }
 ```
 
+## Pivot facets
+
+There is built in support for basic pivot facets in Blacklight.  This is a "hierarchical" facet that will nest the values of the facet fields that you provide.
+
+```ruby
+config.add_facet_field 'topic_language', label: 'Topic by language', pivot: [:language_ssim, :subject_ssim]
+```
+
+<div class="image-well">
+  <img src="/public/images/blacklight-7-pivot-facet.png" alt="Example pivot facet" />
+  <div class="caption">Example pivot facet</div>
+</div>
+
+You can also add configure this facet to be dynamically collapsible by setting the `collapsing` configuration option to `true`.
+
+```diff
+- config.add_facet_field 'topic_language', label: 'Topic by language', pivot: [:language_ssim, :subject_ssim]
++ config.add_facet_field 'topic_language', label: 'Topic by language', pivot: [:language_ssim, :subject_ssim], collapsing: true
+```
+
+<div class="image-well">
+  <img src="/public/images/blacklight-7-collapsing-pivot-facet.png" alt="Collapsing pivot facet" />
+  <div class="caption">Collapsing pivot facet</div>
+</div>
+
+<div class="alert alert-primary">
+  For more information about configuring facets in Blacklight, <a href="https://github.com/projectblacklight/blacklight/wiki/Configuration---Facet-Fields">checkout the Blacklight Wiki</a>.
+</div>
+
 [^1]: This is sorted by Solr based on the indexed term; Solr offers no control over direction, lexical vs natural sort order, etc.
