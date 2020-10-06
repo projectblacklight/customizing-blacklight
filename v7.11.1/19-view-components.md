@@ -7,8 +7,7 @@ blacklight_version: v7.11.1
 
 Blacklight has added support for [view components](https://github.com/github/view_component). While there are several benefits to using this abstraction, the major benefit for Blacklight (as a Rails engine) the ability to define an explicit interface to views to make them easier and safer to override.
 
-
-## Facet view components
+## View components for overriding a facet
 
 A good example of this new abstraction is the new configuration parameter available for facets:
 
