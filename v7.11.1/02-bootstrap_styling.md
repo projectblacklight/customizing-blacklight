@@ -24,7 +24,7 @@ Next, import the `blacklight.scss` into your `application.scss` file.
 ```
 
 <div class="alert alert-warning">
-  This document assumes that you are using [Sprockets](https://github.com/rails/sprockets) for the assets for your application. You are welcome to use [Webpacker](https://github.com/rails/webpacker), but it will not work with the guidance here.
+  This document assumes that you are using <a href="https://github.com/rails/sprockets">Sprockets</a> for the assets for your application. You are welcome to use <a href="https://github.com/rails/webpacker">Webpacker</a>, but it will not work with the guidance here.
 </div>
 
 
