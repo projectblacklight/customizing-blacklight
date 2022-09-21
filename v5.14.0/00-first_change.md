@@ -15,7 +15,7 @@ One of the first things that that you will want to customize in your Blacklight 
 
 In order to customize the home page text for our new site we will use `override` Blacklight's rails partial for the home page text.  This is one of the most basic methods of customization.
 
-We can find the content of the home page text in the Blacklight codebase at `app/views/catalog/_home_text.html.erb` ([GitHub](https://github.com/projectblacklight/blacklight/blob/master/app/views/catalog/_home_text.html.erb)). If we create a file with the same name under the same directory structure in our application then we have `overriden` that file and the one from our application will be served up instead.  **We cannot stress enough that you only want to override the smallest piece possible. DO NOT copy all of the Blacklight views into your application or you're going to have a bad time.**
+We can find the content of the home page text in the Blacklight codebase at `app/views/catalog/_home_text.html.erb` ([GitHub](https://github.com/projectblacklight/blacklight/blob/v5.14.0/app/views/catalog/_home_text.html.erb)). If we create a file with the same name under the same directory structure in our application then we have `overriden` that file and the one from our application will be served up instead.  **We cannot stress enough that you only want to override the smallest piece possible. DO NOT copy all of the Blacklight views into your application or you're going to have a bad time.**
 
 If we add the following content to our newly created file and refresh the browser we can see that our file is served up as the home page text instead of the file that shipped with Blacklight.
 

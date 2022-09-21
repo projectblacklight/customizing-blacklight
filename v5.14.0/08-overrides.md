@@ -8,7 +8,7 @@ blacklight_version: v5.14.0
 
 Much of Blacklight is written in a way that is overridable, helper methods are no different.
 
-Let's take a look at the [module that renders search constraints on results pages](https://github.com/projectblacklight/blacklight/blob/master/app/helpers/blacklight/render_constraints_helper_behavior.rb). This module is mixed into the `Blacklight::RenderConstraintsHelper` which allows us to override methods mixed in.
+Let's take a look at the [module that renders search constraints on results pages](https://github.com/projectblacklight/blacklight/blob/v5.14.0/app/helpers/blacklight/render_constraints_helper_behavior.rb). This module is mixed into the `Blacklight::RenderConstraintsHelper` which allows us to override methods mixed in.
 
 For example, the `render_constraints` method renders the constraints area in the results page.
 

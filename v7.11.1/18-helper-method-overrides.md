@@ -8,7 +8,7 @@ blacklight_version: v7.11.1
 
 Much of Blacklight is written in a way that is overridable, helper methods are no different.
 
-Let's take a look at the [module that is used to help with some of the layout for Blacklight](https://github.com/projectblacklight/blacklight/blob/master/app/helpers/blacklight/layout_helper_behavior.rb). This  module is mixed into the `Blacklight::BlacklightHelperBehavior` which allows us to override methods mixed in.
+Let's take a look at the [module that is used to help with some of the layout for Blacklight](https://github.com/projectblacklight/blacklight/blob/v7.11.1/app/helpers/blacklight/layout_helper_behavior.rb). This  module is mixed into the `Blacklight::BlacklightHelperBehavior` which allows us to override methods mixed in.
 
 For example, the `html_tag_attributes` method is used to inject HTML tag attributes into the main Blacklight layout.
 

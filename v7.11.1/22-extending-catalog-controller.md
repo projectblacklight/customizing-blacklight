@@ -21,7 +21,7 @@ class StaticPagesController < CatalogController
 +  alias_method :search_action_url, :search_catalog_url
 ```
 
-Next, we need to update the controller to make a solr query and store the result (again, by convention) in the instance variable `@response`. We can copy the way Blacklight does this for the [`CatalogController#index` action](https://github.com/projectblacklight/blacklight/blob/master/app/controllers/concerns/blacklight/catalog.rb#L27) [^2]:
+Next, we need to update the controller to make a solr query and store the result (again, by convention) in the instance variable `@response`. We can copy the way Blacklight does this for the [`CatalogController#index` action](https://github.com/projectblacklight/blacklight/blob/v7.11.1/app/controllers/concerns/blacklight/catalog.rb#L27) [^2]:
 
 ```diff
 class StaticPagesController < CatalogController
