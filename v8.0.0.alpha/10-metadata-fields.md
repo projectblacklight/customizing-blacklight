@@ -128,5 +128,31 @@ configure_blacklight do |config|
 end
 ```
 
+## Components
+
+The field values can also be rendered using a custom viewcomponent. This is a good choice if you want to render a field value in a more complex way than the default rendering pipeline. With a custom view component, you can render the field value in any way you want.
+
+```ruby
+config.add_show_field 'JSON', label: 'Solr Document', component: DetailsComponent
+```
+
+In `app/components/details_component.rb`:
+```ruby
+class DetailsComponent < Blacklight::MetadataFieldComponent
+end
+```
+
+In `app/components/details_component.html.erb`:
+
+```html
+<div>
+  <details>
+    <summary><%= @field.label %></summary>
+
+    <pre><%= @field.values.first %></pre>
+  </details>
+</div>
+```
+
 [^1]: This is a somewhat contrived example; you'd almost certainly be better off mapping the data much earlier.
 [^2]: We're using an inline lambda here for expediency; you could (or even should) structure your code for maintainability using any number of approaches (including extracting it as a constant; extracting a method and using the `method` method to lambda-fy it; extracting a service class that responds to `#call`; etc)

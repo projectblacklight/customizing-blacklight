@@ -19,6 +19,15 @@ configure_blacklight do |config|
 end
 ```
 
+## Fields
+
+It's typical, but not required, that the Blacklight field key matches the solr field name.  This is the case in the example above.  However, you can also configure a field to use a different solr field name, which is useful if you want to use the same field with different display characteristics, or if you want to keep Solr internals out of your URLs:
+
+```ruby
+configure_blacklight do |config|
+  config.add_facet_field 'language', field: 'language_facet_ssim'
+end
+```
 ## Labels
 
 There are a few ways to add labels to fields (as you'll notice if you're following along the example above got a default label), but one of the ways is to add a label key direction. Many of the configurations Blacklight provides take a label option.

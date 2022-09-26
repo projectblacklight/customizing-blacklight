@@ -44,4 +44,10 @@ end
   <div class='caption'>Updated search result with thumbnail</div>
 </div>
 
+## Default thumbnail
+TODO
+## Thumbnail presenter
+
+TODO
+
 You are now able to customize Blacklight to include thumbnails by configuring fields that contain urls to thumbnail images as well as by providing custom thumbnail rendering methods.
