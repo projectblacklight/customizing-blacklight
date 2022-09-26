@@ -87,9 +87,7 @@ You can also add configure this facet to be dynamically collapsible by setting t
 
 Blacklight has added support for [view components](https://github.com/github/view_component). While there are several benefits to using this abstraction, the major benefit for Blacklight (as a Rails engine) the ability to define an explicit interface to views to make them easier and safer to override.
 
-## View components for overriding a facet
-
-A good example of this new abstraction is the new configuration parameter available for facets:
+A good example of this abstraction is the new configuration parameter available for facets:
 
 ```ruby
 config.add_facet_field 'format', label: 'Format', component: SuperSpecialFacetComponent
@@ -134,7 +132,55 @@ We get `@layout` from the upstream component (also separately configurable using
 
 ## Controlling URL parameters
 
-TODO:
+Blacklight uses the `Blacklight::SearchState` to map a user's query parameters to an internal representation. This object is responsible for generating the URL parameters for the search, and for parsing the URL parameters into a search state. Although you can customize the behavior of the search state by overriding the `search_state_class` configuration, you can also make facet field specific changes by setting the `filter_class` configuration on the facet field.
+
+Here, we'll map the language field to a single-valued `language` parameter instead of the default `f[format][]`:
+
+```ruby
+config.add_facet_field 'language_ssim', filter_class: SimpleFilterClass
+```
+
+```ruby
+# app/models/simple_filter_class.rb
+class SimpleFilterClass < Blacklight::SearchState::FilterField
+  # Add a facet item to the URL parameters
+  def add(item)
+    new_state = search_state.reset_search
+
+    params = new_state.params
+    params[key] = as_url_parameter(item)
+
+    new_state.reset(params)
+  end
+
+  # Remove a facet item from the URL parameters
+  # Since this is a single-valued field, we can just
+  # remove the whole parameter
+  def remove(item)
+    new_state = search_state.reset_search
+
+    params = new_state.params
+
+    params.delete(key)
+
+    new_state.reset(params)
+  end
+
+  # Facet values set int he URL
+  def values(except: [])
+    Array(search_state.params[key])
+  end
+
+  # Is a given facet item currently selected?
+  def include?(item)
+    values.include? as_url_parameter(item)
+  end
+
+  def permitted_params
+    [key]
+  end
+end
+```
 
 
 <div class="alert alert-primary">
