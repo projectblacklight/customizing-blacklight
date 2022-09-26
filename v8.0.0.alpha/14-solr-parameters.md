@@ -41,6 +41,11 @@ In development, it can be handy to see the stored fields for a document. While y
 
 Note that this API is disabled by default, both to discourage coupling applications to the underlying Solr document format and to avoid leaking non-public information present in the document.
 
+```ruby
+## Should the raw solr document endpoint (e.g. /catalog/:id/raw) be enabled
+config.raw_endpoint.enabled = true
+```
+
 ### Changing behavior with the `CatalogController`
 
 We can add or change the default parameters sent to Solr in the `CatalogController`. In `./app/controllers/catalog_controller.rb`, we can see the default configuration sets the number of items per search result:
