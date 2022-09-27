@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Updating the home page
+title: Starting the Rails application
 permalink: /v8.0.0.alpha/starting-rails/
 blacklight_version: v8.0.0.alpha
 ---
