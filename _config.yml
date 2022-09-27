@@ -10,9 +10,9 @@ description:         'Click the links below to see high-level pages about custom
 url:                 http://lanyon.getpoole.com
 baseurl:             '/'
 paginate:            5
-gems:                ["jekyll-paginate"]
 highlighter:         rouge
 plugins:
+  - jekyll-paginate
   - jekyll-redirect-from
 
 # Custom vars
