@@ -122,7 +122,7 @@ Alternatively, you can use the `values` parameter to provide document values [^2
 ```ruby
 configure_blacklight do |config|
   # Index / Search Results
-  config.add_index_field 'JSON', label: 'Solr Document', values: ->(field_config, document) {
+  config.add_index_field 'JSON', label: 'Solr Document', values: ->(field_config, document, _) {
     "<pre>#{document.as_json}</pre>".html_safe
   }
 end
