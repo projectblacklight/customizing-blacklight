@@ -47,7 +47,7 @@ In this case there is a theoretical lookup table that holds a hash of possible t
 
 ## Partial
 
-One of the more powerful mechanisms for customizing facets is to configure a custom partial to handle rendering the facet.  This will allow the application to provide its own view to replace Blacklight's [facet_limit partial](https://github.com/projectblacklight/blacklight/blob/master/app/views/catalog/_facet_limit.html.erb).
+One of the more powerful mechanisms for customizing facets is to configure a custom partial to handle rendering the facet.  This will allow the application to provide its own view to replace Blacklight's [facet_limit partial](https://github.com/projectblacklight/blacklight/blob/v5.14.0/app/views/catalog/_facet_limit.html.erb).
 
 {% highlight ruby %}
 # app/controllers/catalog_controller.rb
