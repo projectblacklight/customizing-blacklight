@@ -2,6 +2,8 @@
 
 A Jekyll based site for tutorials on customizing Blacklight applications.
 
+Publishes to: <https://workshop.projectblacklight.org/>
+
 ## Authors
 
 **Jessie Keck**
