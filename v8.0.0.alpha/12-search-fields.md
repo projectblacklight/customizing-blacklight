@@ -5,7 +5,7 @@ permalink: /v8.0.0.alpha/search_fields/
 blacklight_version: v8.0.0.alpha
 ---
 
-Blacklight provides a UI element to choose a which "search fields" to execute the search against when multiple search field options are configured.  This is often used to provide a `Title`, `Author`, etc. search in addition to the default `All fields`.  You can think of these as different request handlers (`qt` parameter) in solr, however; it's not uncommon to use a single request handler and configure the solr_parameters directly in the search field configuration.
+Blacklight provides a UI element to choose which "search fields" to execute the search against when multiple search field options are configured.  This is often used to provide a `Title`, `Author`, etc. search in addition to the default `All fields`.  You can think of these as different request handlers (`qt` parameter) in solr, however; it's not uncommon to use a single request handler and configure the solr_parameters directly in the search field configuration.
 
 <div class="image-well">
   <img src="/public/images/blacklight-7-search-fields.png" alt="Blacklight search fields dropdown" />

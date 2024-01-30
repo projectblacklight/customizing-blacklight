@@ -182,7 +182,7 @@ class SimpleFilterClass < Blacklight::SearchState::FilterField
     new_state.reset(params)
   end
 
-  # Facet values set int he URL
+  # Facet values set in the URL
   def values(except: [])
     Array(search_state.params[key])
   end
@@ -200,7 +200,7 @@ end
 
 
 <div class="alert alert-primary">
-  For more information about configuring facets in Blacklight, <a href="https://github.com/projectblacklight/blacklight/wiki/Configuration---Facet-Fields">checkout the Blacklight Wiki</a>.
+  For more information about configuring facets in Blacklight, <a href="https://github.com/projectblacklight/blacklight/wiki/Configuration---Facet-Fields">check out the Blacklight Wiki</a>.
 </div>
 
 [^1]: This is sorted by Solr based on the indexed term; Solr offers no control over direction, lexical vs natural sort order, etc.

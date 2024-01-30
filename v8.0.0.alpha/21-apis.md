@@ -56,7 +56,6 @@ http://127.0.0.1:3000/catalog/00282214.marcjson
 
 ### Search results
 
-In addition to
 You can also affect which search results response formats are available, in addition to the out-of-the-box HTML, JSON, Atom and RSS feeds. Take a look at, e.g.:
 
 - [http://127.0.0.1:3000/catalog?search_field=all_fields&q=&format=marc](http://127.0.0.1:3000/catalog?search_field=all_fields&q=&format=marc)

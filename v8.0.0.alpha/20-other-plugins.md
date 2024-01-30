@@ -22,5 +22,5 @@ These types of plugins provide a specific type of Blacklight application experie
 Blacklight plugins exist as separate software projects, and can even have adjacent communities that help maintain them.
 
 <div class="alert alert-primary">
-  For more information about Blacklight plugins, <a href="https://github.com/projectblacklight/blacklight/wiki/Blacklight-Add-ons">checkout the Blacklight Wiki</a>.
+  For more information about Blacklight plugins, <a href="https://github.com/projectblacklight/blacklight/wiki/Blacklight-Add-ons">check out the Blacklight Wiki</a>.
 </div>

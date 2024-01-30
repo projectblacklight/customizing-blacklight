@@ -22,7 +22,7 @@ The configuration patterns outlined on [General Configuration Patterns](/v8.0.0.
 
 ## Labeling via Internationalization (i18n)
 
-All the text in Blacklight's UI are configured via rails' i18n files. While you can apply a string label directly in the Blackklight config, you can also label these in your i18n config files (e.g. in `config/locales/blacklight.en.yml`).
+All the text in Blacklight's UI are configured via rails' i18n files. While you can apply a string label directly in the Blacklight config, you can also label these in your i18n config files (e.g. in `config/locales/blacklight.en.yml`).
 
 If you wanted to change the label of all `author_tsim` fields to "Creator" you can do that by adding the label to your locale file.
 
