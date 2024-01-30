@@ -8,6 +8,7 @@ blacklight_version: v8.0.0.alpha
 The metadata fields that are displayed in the index (search results) and show (record view) can be configured using the `add_index_field` and `add_show_field` configuration methods in the Blacklight config.
 
 ```ruby
+# app/controllers/catalog_controller.rb
 configure_blacklight do |config|
   # Index / Search Results
   config.add_index_field 'author_tsim', label: 'Author'
@@ -55,6 +56,7 @@ There are a few configuration options that can help you format the data using Bl
 One common customization is to update the way that Blacklight joins multiple values by default. Blacklight's rendering pipeline uses rails' [`to_sentence`](https://apidock.com/rails/Array/to_sentence) helper (with its default options) to join multiple solr field values together, and allows you to pass in alternate options using the `separator_options` configuration option.  For instance, if we wanted to separate all values by line breaks instead of the `,`s and `and` we can do that with the following configuration (the record with ID 92117465 is a good example of this in action).
 
 ```ruby
+# app/controllers/catalog_controller.rb
 configure_blacklight do |config|
   # This field configuration would need to be added as it is not in the generated controller
   config.add_show_field 'author_addl_tsim', label: 'Additional authors', separator_options: {
@@ -68,6 +70,7 @@ end
 It's also possible to link these values using the built-in `link_to_facet` configuration option. Two of the show fields that it might make sense to do this with (and are indexed appropriately for faceting) are the format and language fields on the show view.
 
 ```diff
+# app/controllers/catalog_controller.rb
 - config.add_show_field 'format', label: 'Format'
 - config.add_show_field 'language_ssim', label: 'Language'
 + config.add_show_field 'format', label: 'Format', link_to_facet: true
@@ -85,6 +88,7 @@ The field values can also be mapped using field configuration. There are two eas
 Accessors are handy when the transformation you want to make is based entirely on the data from the field (or document). One thing you might do is map names given as "last name, first name" into "first name last name" [^1]. The most basic accessor configuration is using the explicit accessor configuration:
 
 ```ruby
+# app/controllers/catalog_controller.rb
 configure_blacklight do |config|
   # Index / Search Results
   config.add_index_field 'author_tsim', label: 'Author', accessor: :author_name
@@ -120,6 +124,7 @@ end
 Alternatively, you can use the `values` parameter to provide document values [^2]. This is a good choice if the value varies based on the request (e.g. the values are internationalized using the user's profile, or an administrator sees additional data, etc):
 
 ```ruby
+# app/controllers/catalog_controller.rb
 configure_blacklight do |config|
   # Index / Search Results
   config.add_index_field 'JSON', label: 'Solr Document', values: ->(field_config, document, _) {
@@ -133,6 +138,7 @@ end
 The field values can also be rendered using a custom viewcomponent. This is a good choice if you want to render a field value in a more complex way than the default rendering pipeline. With a custom view component, you can render the field value in any way you want.
 
 ```ruby
+# app/controllers/catalog_controller.rb
 config.add_show_field 'JSON', label: 'Solr Document', component: DetailsComponent
 ```
 

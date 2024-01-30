@@ -42,6 +42,7 @@ In development, it can be handy to see the stored fields for a document. While y
 Note that this API is disabled by default, both to discourage coupling applications to the underlying Solr document format and to avoid leaking non-public information present in the document.
 
 ```ruby
+# app/controllers/catalog_controller.rb
 ## Should the raw solr document endpoint (e.g. /catalog/:id/raw) be enabled
 config.raw_endpoint.enabled = true
 ```
@@ -51,6 +52,7 @@ config.raw_endpoint.enabled = true
 We can add or change the default parameters sent to Solr in the `CatalogController`. In `./app/controllers/catalog_controller.rb`, we can see the default configuration sets the number of items per search result:
 
 ```ruby
+# app/controllers/catalog_controller.rb
 ## Default parameters to send to solr for all search-like requests. See also SearchBuilder#processed_parameters
 config.default_solr_params = {
   rows: 10
@@ -62,6 +64,7 @@ Try changing the value to 20.
 We can also override behavior from the requestHandler. Try adding a `qf` parameter and tweaking the fields + weights:
 
 ```ruby
+# app/controllers/catalog_controller.rb
 ## Default parameters to send to solr for all search-like requests. See also SearchBuilder#processed_parameters
 config.default_solr_params = {
   rows: 20,

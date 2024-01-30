@@ -69,6 +69,7 @@ Note that this can be used in combination with any search query, facets, or sort
 To add a different API format, you can instruct Blacklight to provide alternative results. In `app/controllers/catalog_controller.rb`, add:
 
 ```diff
+# app/controllers/catalog_controller.rb
  configure_blacklight do |config|
 +   config.index.respond_to.csv = true
  end

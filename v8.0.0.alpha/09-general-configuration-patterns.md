@@ -14,6 +14,7 @@ The keys provided to many fields are intended to point either to a field in solr
 The following example will configure a facet with the field name `language_ssim` based on the key that was passed in.
 
 ```ruby
+# app/controllers/catalog_controller.rb
 configure_blacklight do |config|
   config.add_facet_field 'language_ssim'
 end
@@ -24,6 +25,7 @@ end
 It's typical, but not required, that the Blacklight field key matches the solr field name.  This is the case in the example above.  However, you can also configure a field to use a different solr field name, which is useful if you want to use the same field with different display characteristics, or if you want to keep Solr internals out of your URLs:
 
 ```ruby
+# app/controllers/catalog_controller.rb
 configure_blacklight do |config|
   config.add_facet_field 'language', field: 'language_facet_ssim'
 end
@@ -33,6 +35,7 @@ end
 There are a few ways to add labels to fields (as you'll notice if you're following along the example above got a default label), but one of the ways is to add a label key direction. Many of the configurations Blacklight provides take a label option.
 
 ```ruby
+# app/controllers/catalog_controller.rb
 configure_blacklight do |config|
   config.add_facet_field 'language_ssim', label: 'Language'
 end
@@ -44,6 +47,7 @@ You can control the display of elements by passing values to `if` and `unless`. 
 
 
 ```ruby
+# app/controllers/catalog_controller.rb
 configure_blacklight do |config|
   config.add_facet_field 'language_ssim', label: 'Language', if: false
 end
@@ -56,6 +60,7 @@ You can also control display using the `if`/`unless` configurations by passing a
 In the example below, the language facet will only be displayed when a format of "Book" has been selected in the facets.
 
 ```ruby
+# app/controllers/catalog_controller.rb
 configure_blacklight do |config|
   config.add_facet_field 'language_ssim', label: 'Language', if: -> (controller, _config, _field) do
     selected_formats = controller.params.dig('f', 'format') || []
@@ -66,5 +71,5 @@ end
 ```
 
 <div class="alert alert-primary">
-  For more information about configuring Blacklight, <a href="https://github.com/projectblacklight/blacklight/wiki/Configuring-and-Customizing-Blacklight#configuration">checkout the Blacklight Wiki</a>.
+  For more information about configuring Blacklight, <a href="https://github.com/projectblacklight/blacklight/wiki/Configuring-and-Customizing-Blacklight#configuration">check out the Blacklight Wiki</a>.
 </div>
