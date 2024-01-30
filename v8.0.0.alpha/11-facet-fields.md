@@ -112,21 +112,30 @@ For this example, we want to customize the display of the facet, so we'll need t
 
 ```erb
 <%= render(@layout.new(facet_field: @facet_field)) do |component| %>
-  <% component.with(:label) do %>
+  <% component.with_label do %>
     <%= @facet_field.label %>
   <% end %>
-  <% component.with(:body) do %>
+  <% component.with_body do %>
+    <%= helpers.render(Blacklight::FacetFieldInclusiveConstraintComponent.new(facet_field: @facet_field)) %>
     <ul class="facet-values list-unstyled">
-      <%= render_facet_limit_list @facet_field.paginator, @facet_field.key %>
+      <%= render facet_items %>
     </ul>
+    <%# backwards compatibility, ugh %>
+    <% if @layout == Blacklight::FacetFieldNoLayoutComponent && !@facet_field.in_modal? && @facet_field.modal_path %>
+      <div class="more_facets">
+        <%= link_to t("more_#{@facet_field.key}_html", scope: 'blacklight.search.facets', default: :more_html, field_name: @facet_field.label),
+          @facet_field.modal_path,
+          data: { blacklight_modal: 'trigger' } %>
+      </div>
+    <% end %>
   <% end %>
 <% end %>
 ```
 
-and then make a nice visible change:
+and then make a nice visible change (the label disappears):
 
 ```diff
-<% component.with(:label) do %>
+  <% component.with_label do %>
 -   <%= @facet_field.label %>
 +   -> <%= @facet_field.label %> <-
 <% end %>
