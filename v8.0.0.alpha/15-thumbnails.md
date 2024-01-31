@@ -49,6 +49,7 @@ end
 Sometimes, not all documents have a thumbnail. In this case, you can configure a default thumbnail to be used for documents that don't have a thumbnail.
 
 {% highlight ruby %}
+# app/controllers/catalog_controller.rb
   config.index.default_thumbnail = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMTUwIiB2aWV3Qm94PSIwIDAgMzAwIDE1MCI-IDxyZWN0IGZpbGw9IiNkZGQiIHdpZHRoPSIzMDAiIGhlaWdodD0iMTUwIi8-IDx0ZXh0IGZpbGw9InJnYmEoMCwwLDAsMC41KSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjMwIiBkeT0iMTAuNSIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgeD0iNTAlIiB5PSI1MCUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPjMwMMOXMTUwPC90ZXh0PiA8L3N2Zz4='
 {% endhighlight%}
 

@@ -14,14 +14,16 @@ First, we need to pull in the Blacklight configuration from the `CatalogControll
 + class StaticPagesController < CatalogController
 ```
 
-If we try to look at the home page now, we'll see a routing error (`ActionController::UrlGenerationError in StaticPages#home`). We'll also need to tell the `StaticPagesController` we want to use the catalog routes from `CatalogController` [^1]. By convention, Blacklight uses the `search_action_url` method to route to the correct place. We can override that in the controller:
+If we try to look at the home page now, we'll see a routing error (`ActionController::UrlGenerationError in StaticPages#home`). We'll also need to tell the `StaticPagesController` we want to use the catalog routes from `CatalogController`. By convention, Blacklight uses the `search_action_url` method to route to the correct place. Update routes.rb to give static_pages access to those routes.
 
 ```diff
-class StaticPagesController < CatalogController
-+  alias_method :search_action_url, :search_catalog_url
+# routes.rb
++  resource :static_pages, only: [:home], as: 'home', path: '/', controller: 'static_pages' do
++    concerns :searchable
++  end
 ```
 
-Next, we need to update the controller to make a solr query and store the result (again, by convention) in the instance variable `@response`. We can copy the way Blacklight does this for the [`CatalogController#index` action](https://github.com/projectblacklight/blacklight/blob/master/app/controllers/concerns/blacklight/catalog.rb#L27) [^2]:
+Next, we need to update the controller to make a solr query and store the result (again, by convention) in the instance variable `@response`. We can copy the way Blacklight does this for the [`CatalogController#index` action](https://github.com/projectblacklight/blacklight/blob/master/app/controllers/concerns/blacklight/catalog.rb#L27) [^1]:
 
 ```diff
 class StaticPagesController < CatalogController
@@ -56,6 +58,4 @@ class StaticPagesController < CatalogController
 
 <hr />
 
-[^1]: We might want the opposite if we wanted our controller to be a specialization of `CatalogController` (perhaps providing a filtered "ebooks" view or an administration view with a specialized display and tooling). If we wanted to do that, we'd add search routing to the controller in `./config/routes.rb`.
-
-[^2]: This index method does a little more than we need to do to add a few facets. Note, too, the `deprecated_document_list` argument coming back from the search service; in Blacklight 8, this method will return only the response.
+[^1]: This index method does a little more than we need to do to add a few facets. Note, too, the `deprecated_document_list` argument coming back from the search service; in Blacklight 8, this method will return only the response.

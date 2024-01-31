@@ -6,7 +6,7 @@ redirect_from: /overrides/
 blacklight_version: v8.0.0.alpha
 ---
 
-Much of Blacklight is written in a way that is overridable, helper methods are no different.
+Much of Blacklight is written in a way that is overridable. Helper methods are no different.
 
 Let's take a look at the [module that is used to help with some of the layout for Blacklight](https://github.com/projectblacklight/blacklight/blob/master/app/helpers/blacklight/layout_helper_behavior.rb). This  module is mixed into the `Blacklight::BlacklightHelperBehavior` which allows us to override methods mixed in.
 
@@ -41,7 +41,7 @@ module CustomLayoutHelper
 end
 {% endhighlight %}
 
-Now we are free to override methods to meet our custom application needs. For example, lets override the `html_tag_attributes` method.
+Now we are free to override methods to meet our custom application needs. For example, let's override the `html_tag_attributes` method.
 
 {% highlight ruby %}
 # app/helpers/custom_layout_helper.rb
@@ -66,5 +66,5 @@ This overridden method adds an additional attribute `dir="rtl"` to display our p
 This is just one way that the Blacklight code can be overridden and customized. Similar patterns can be used to customize controllers and search behavior.
 
 <div class="alert alert-primary">
-  For more information about overriding helpers, <a href="https://github.com/projectblacklight/blacklight/wiki/Configuring-and-Customizing-Blacklight#custom-view-helpers">checkout the Blacklight Wiki</a>.
+  For more information about overriding helpers, <a href="https://github.com/projectblacklight/blacklight/wiki/Configuring-and-Customizing-Blacklight#custom-view-helpers">check out the Blacklight Wiki</a>.
 </div>

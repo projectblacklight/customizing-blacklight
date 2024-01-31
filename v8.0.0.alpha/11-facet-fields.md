@@ -10,6 +10,7 @@ Blacklight provides facets to help a user filter search results.
 Facet fields can be configured using the `add_facet_field` configuration method:
 
 ```ruby
+# app/controllers/catalog_controller.rb
 configure_blacklight do |config|
   config.add_facet_field 'format', label: 'Format'
 end
@@ -20,6 +21,7 @@ Solr calculates the number of hits for each format value. Blacklight displays th
 If there are many facet values, you can use `limit` to control how many appear on the search results page.
 
 ```diff
+# app/controllers/catalog_controller.rb
 - config.add_facet_field 'subject_ssim', label: 'Topic'
 + config.add_facet_field 'subject_ssim', label: 'Topic', limit: 5
 ```
@@ -28,12 +30,14 @@ Additional facet values are available in a modal popup.
 
 You can control whether the facet is displayed expanded by default:
 ```diff
+# app/controllers/catalog_controller.rb
 - config.add_facet_field 'format', label: 'Format'
 + config.add_facet_field 'format', label: 'Format', collapse: false
 ```
 
 You can also sort the values alphabetically [^1]:
 ```diff
+# app/controllers/catalog_controller.rb
 - config.add_facet_field 'format', label: 'Format', collapse: false
 + config.add_facet_field 'format', label: 'Format', collapse: false, sort: 'alpha', limit: -1
 ```
@@ -41,6 +45,7 @@ You can also sort the values alphabetically [^1]:
 If the facet data is mutually exclusive, you might consider using `single` to allow the user to toggle between values easily:
 
 ```diff
+# app/controllers/catalog_controller.rb
 - config.add_facet_field 'pub_date_ssim', label: 'Publication Year'
 + config.add_facet_field 'pub_date_ssim', label: 'Publication Year', single: true
 ```
@@ -51,6 +56,7 @@ If the facet data is mutually exclusive, you might consider using `single` to al
 Blacklight also has built-in support for other types of Solr faceting. Query facets are good for providing facets based on dynamic data not directly present in the index. You can specify the "values" of a query facet and the applicable Solr query using the `query` parameter:
 
 ```ruby
+# app/controllers/catalog_controller.rb
 config.add_facet_field 'example_query_facet_field', label: 'Publish Date', query: {
    years_5: { label: 'within 5 Years', fq: "pub_date_ssim:[#{Time.zone.now.year - 5 } TO *]" },
    years_10: { label: 'within 10 Years', fq: "pub_date_ssim:[#{Time.zone.now.year - 10 } TO *]" },
@@ -106,21 +112,30 @@ For this example, we want to customize the display of the facet, so we'll need t
 
 ```erb
 <%= render(@layout.new(facet_field: @facet_field)) do |component| %>
-  <% component.with(:label) do %>
+  <% component.with_label do %>
     <%= @facet_field.label %>
   <% end %>
-  <% component.with(:body) do %>
+  <% component.with_body do %>
+    <%= helpers.render(Blacklight::FacetFieldInclusiveConstraintComponent.new(facet_field: @facet_field)) %>
     <ul class="facet-values list-unstyled">
-      <%= render_facet_limit_list @facet_field.paginator, @facet_field.key %>
+      <%= render facet_items %>
     </ul>
+    <%# backwards compatibility, ugh %>
+    <% if @layout == Blacklight::FacetFieldNoLayoutComponent && !@facet_field.in_modal? && @facet_field.modal_path %>
+      <div class="more_facets">
+        <%= link_to t("more_#{@facet_field.key}_html", scope: 'blacklight.search.facets', default: :more_html, field_name: @facet_field.label),
+          @facet_field.modal_path,
+          data: { blacklight_modal: 'trigger' } %>
+      </div>
+    <% end %>
   <% end %>
 <% end %>
 ```
 
-and then make a nice visible change:
+and then make a nice visible change (the label disappears):
 
 ```diff
-<% component.with(:label) do %>
+  <% component.with_label do %>
 -   <%= @facet_field.label %>
 +   -> <%= @facet_field.label %> <-
 <% end %>
@@ -137,6 +152,7 @@ Blacklight uses the `Blacklight::SearchState` to map a user's query parameters t
 Here, we'll map the language field to a single-valued `language` parameter instead of the default `f[format][]`:
 
 ```ruby
+# app/controllers/catalog_controller.rb
 config.add_facet_field 'language_ssim', filter_class: SimpleFilterClass
 ```
 
@@ -166,7 +182,7 @@ class SimpleFilterClass < Blacklight::SearchState::FilterField
     new_state.reset(params)
   end
 
-  # Facet values set int he URL
+  # Facet values set in the URL
   def values(except: [])
     Array(search_state.params[key])
   end
@@ -184,7 +200,7 @@ end
 
 
 <div class="alert alert-primary">
-  For more information about configuring facets in Blacklight, <a href="https://github.com/projectblacklight/blacklight/wiki/Configuration---Facet-Fields">checkout the Blacklight Wiki</a>.
+  For more information about configuring facets in Blacklight, <a href="https://github.com/projectblacklight/blacklight/wiki/Configuration---Facet-Fields">check out the Blacklight Wiki</a>.
 </div>
 
 [^1]: This is sorted by Solr based on the indexed term; Solr offers no control over direction, lexical vs natural sort order, etc.

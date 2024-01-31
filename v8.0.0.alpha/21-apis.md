@@ -56,7 +56,6 @@ http://127.0.0.1:3000/catalog/00282214.marcjson
 
 ### Search results
 
-In addition to
 You can also affect which search results response formats are available, in addition to the out-of-the-box HTML, JSON, Atom and RSS feeds. Take a look at, e.g.:
 
 - [http://127.0.0.1:3000/catalog?search_field=all_fields&q=&format=marc](http://127.0.0.1:3000/catalog?search_field=all_fields&q=&format=marc)
@@ -69,6 +68,7 @@ Note that this can be used in combination with any search query, facets, or sort
 To add a different API format, you can instruct Blacklight to provide alternative results. In `app/controllers/catalog_controller.rb`, add:
 
 ```diff
+# app/controllers/catalog_controller.rb
  configure_blacklight do |config|
 +   config.index.respond_to.csv = true
  end
